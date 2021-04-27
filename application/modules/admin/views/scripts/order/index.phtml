@@ -1,0 +1,72 @@
+
+<?php
+    $linkedit = $this->baseURL($this->currentController.  '/edit/id/');
+    $linkdelete = $this->baseURL($this->currentController.  '/delete/id/');
+    $linkadd = $this->baseURL($this->currentController.  '/add');
+   
+?>
+
+<div class="layout">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+
+                </div>     
+            </div>
+            <div class="col-md-12">
+                <div class="card shadow ">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <div class="col-md-12 content1">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <h3>Dữ Liệu Xuất Ra <br /></h3>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a href="<?php echo $linkadd ?>" class="btn btn-danger">Thêm Mới</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <table class="table table-bordered" id="dataTable"  cellspacing="0">
+                                <thead>
+                                        <tr>
+                                                <th>Transition_ID</th>
+                                                <th>Product_id</th>
+                                                <th>Qty</th>
+                                                <th>Amount</th>
+                                                <th>Data</th>
+                                                <th>Status</th>
+                                                <th>Sửa</th>
+                                                <th>Xóa</th>      
+                                        </tr>
+                                </thead>
+                                <?php foreach ($this->Items as $index): ?>
+                                <tbody>
+                                    <td><?php echo $this->escape($index->transition_id) ?></td>
+                                    <td><?php echo $this->escape($index->product_id) ?> </td?>
+                                    <td><?php echo $this->escape($index->qty) ?></td>
+                                    <td><img src="<?php echo $this->escape($index->amount) ?>" alt=""></td>
+                                    <td><?php echo $this->escape($index->data) ?></td>
+                                    <td><?php echo $this->escape($index->status) ?></td>
+                                    <td>
+                                        <a href="<?php echo $linkedit .$this->escape($index->id) ?>">Sửa</a>
+
+                                    </td>
+                                    <td>
+                                        <a href="<?php echo $linkdelete .$this->escape($index->id)?>">Xóa</a>
+                                    </td>                     
+                                </tbody>
+                                <?php endforeach ?>
+                            </table>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+                
+        </div>
+    </div>
+</div>
+
+ 

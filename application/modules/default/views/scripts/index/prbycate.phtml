@@ -1,0 +1,53 @@
+<?php
+function truncateString($str, $maxChars = 40, $holder = "...")
+{
+    if (strlen($str) > $maxChars) {
+        return trim(substr($str, 0, $maxChars)) . $holder;
+    } else {
+        return $str;
+    }
+}
+
+$linkdetailpr = $this->baseURL($this->currentController.'/detailpr/id/');
+?>
+<div class="productnew">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="titlepronew">
+                <h1>Danh Sách</h1>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="listproductnew">
+                <div class="row">
+                    <?php foreach ($this->Product as $p){ ?>
+                        <div class="col-md-3">
+                            <div class="course">
+                                <div class="card" style="width: 16rem;">
+                                    <div class="card-img" style="height: 150px">
+                                        <img class="card-img-top load" style="width: 150px!important;margin-left:55px!important;" src="<?php echo IMAGE_LINK?>/default/system/images/<?php echo $p['image_list']   ?>" alt="Card image cap">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?php echo $p['name'] ?></h5>
+                                        <p class="card-text ct"><?php echo truncateString($p['content' ] )?> <a
+                                                    href="<?php echo $linkdetailpr .  $p['id']  ?>"> Đọc Tiếp</a></p>
+                                        <div class="info">
+                                               <span class="card-text pri"><?php echo  number_format($p['price' ]).'đ'; ?>
+                                               </span>
+                                            <span class="badge badge-secondary"><?php echo $p['discount' ] .'%' ?></span>
+                                        </div>
+
+                                        <a href="#" class="btn btn-danger buy">Đặt hàng</a>
+                                        <a href="<?php echo $linkdetailpr .  $p['id']  ?>" class="btn btn-primary more">Xem thêm</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php  } ?>
+
+                </div>
+            </div>    
+        </div>
+
+    </div>
+</div>

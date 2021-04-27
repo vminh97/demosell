@@ -1,0 +1,38 @@
+<?php
+$linkindex= $this->baseURL($this->currentController.  '/index');
+?>
+<div class="title">
+    <h1 class="titleh1">Xóa Dữ Liệu</h1>
+</div>
+<form name="appForm" method="post" >
+    <div class="clr"></div>
+
+    <!-- BEGIN: CONTENT -->
+    <div id="element-box">
+        <div class="t">
+            <div class="t">
+                <div class="t"></div>
+            </div>
+        </div>
+        <div class="m">
+            <!-- BEGIN: ELEMENT BOX -->
+            <div id="adminfieldset">
+                <div id="errors">
+                    Bạn có chắc chắn muốn xóa phần tử này không ?
+                </div>
+            </div>
+            <div class="button" style="margin-bottom: 25px;">
+                <a type="submit" id="submit" name="submit" href=""></a><button style="margin-left: 110px;" class="btn btn-success">Delete</button></a>
+                <a href="<?php echo $linkindex?>"><button type="button" class="btn btn-danger">Cancer</button></a>
+            </div>
+            <!-- END: ELEMENT BOX -->
+            <div class="clr"></div>
+        </div>
+        <div class="b">
+            <div class="b">
+                <div class="b"></div>
+            </div>
+        </div>
+    </div>
+    <!-- END: 	CONTENT -->
+</form>

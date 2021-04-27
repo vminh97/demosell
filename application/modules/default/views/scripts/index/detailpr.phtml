@@ -1,0 +1,209 @@
+<?php 
+$linkdetailpr = $this->baseURL($this->currentController.'/detailpr/id/');
+?>
+    <div class="container">
+        <div class="row">
+       
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-5" style="margin-top:30px">
+                        <div id="content-wrapper">                    
+                            <div class="column">
+                                <img id=featured src="<?php echo IMAGE_LINK?>/default/system/images/<?php echo $this->detailpro2['image_list'] ?>">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7" style="margin-top:30px;margin-left: -35px;">
+                        <div class="col-md-12">
+                            <div class="detail2">
+                                <span class="titlenamepr"> <?php echo $this->detailpro2['name'] ?></span></br>
+                                <div class='brand'>
+                                    <p><?php echo $this->detailpro2['brand'] ?></p>
+                                </div>
+                                <div class="okb">
+                                    <span class="pricepr"> 
+                                    <?php echo number_format($this->detailpro2['price']).'đ' ?>
+                                    </span>
+                                    <span>
+                                    <span class="badge badge-primary"><?php echo $this->detailpro2['discount'] ?>%</span>
+                                    </span>
+                                    <span>(Đã có VAT)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-md-12">
+                                        <p>
+                                            - Thiết Kế Đẹp, Sang Trọng </br>
+                                            - Gía Thành Rẻ Bất Ngờ</br>
+                                            - Hỗ Trợ Đổi Trả, Bảo Hành Một Năm</br>
+                                            - Tư Vấn Giải Đáp Mọi Thắc Mắc Của Khách Hàng</br>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="btn btn-danger muang">
+                                            Mua Ngay
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-6" style="margin-top: -65px;">
+                                    <div class="ab">
+                                            <div class="col-md-12" style="border-bottom:1px solid #cec5c5;height: 60px; margin-bottom:15px ">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <i class="fas fa-truck fa-3x"></i>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="col-md-12">
+                                                            <span class="title99">Giao Hàng Miễn Phí</span></br>
+                                                            <span class="title98">Sản Phẩm Trên 600,000đ</span>
+                                                        </div>
+                                                    </div>
+                                                </div>                                        
+                                            </div>
+                                            <div class="col-md-12" style="border-bottom:1px solid #cec5c5;height: 60px;margin-bottom:15px ">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                       <i class="fas fa-store-alt fa-3x"></i>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="col-md-12">
+                                                            <span  class="title99">Đổi trả Miễn Phí</span></br>
+                                                            <span  class="title98">Đổi trả miễn phí 60 ngày</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>                                  
+                                            <div class="col-md-12" style="border-bottom:1px solid #cec5c5;height: 60px; margin-bottom:15px">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <i class="fas fa-money-bill-wave fa-3x"></i>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="col-md-12">
+                                                            <span  class="title99">Thanh Toán </span></br>
+                                                            <span  class="title98">Kiểm tra hàng khi nhận</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>                                  
+                                            <div class="col-md-12" style="border-bottom:1px solid #cec5c5;height: 60px;margin-bottom:15px ">
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                         <i class="fas fa-shopping-cart fa-3x"></i>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="col-md-12">
+                                                            <span  class="title97">Hỗ Trợ Mua Hàng</span></br>
+                                                            <span  class="title96">0348439496</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                            </div>
+                                    </div>
+                                                
+                                </div>
+                            </div>
+                            
+                        </div>
+                    
+                    </div>
+                </div>              
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-8" style="border:1px solid #cec5c5">
+                        <div class="col-md-12">
+                            <div class="titlepr">
+                                <h3 class="ttct">Thông Tin Chi Tiết</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="contentpr">
+                                <?php echo $this->detailpro2['ParameterPro'] ?>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="col-md-4">
+                        <div class="col-md-12" style="height: 400px;">
+                            <div class="ank" style="margin-bottom:20px">
+                                <div class="col-md-12" style="margin-bottom:20px">
+                                    <h3 style="margin-left: 15px;
+                                    border-bottom:1px solid #cec5c5">Thông Số Kỹ Thuật</h3>
+                                </div>
+                                <div class="col-md-12" >
+                                      <?php echo $this->detailpro2['skill'] ?>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="producttt">
+                                <div class="col-md-12">
+                                    <h3 style="margin-left: 15px;">Sản Phẩm Tương tự</h3>
+                                </div>
+                                <?php foreach ($this->simalar as $p){ ?>
+                                <div class="col-md-12" style="margin-top: 12px; border-bottom: 1px solid #cec5c5">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <img class="producttt" src="<?php echo IMAGE_LINK?>/default/system/images/<?php echo $p['image_list'] ?>">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="col-md-12">
+                                                <span class="titlett1"><a href="<?php echo $linkdetailpr.$p['id'] ?>"><?php echo $p['name'] ?></a></span></br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <?php  } ?>
+                                </div> 
+                            </div>
+                        </div>                           
+                    </div>
+                </div>
+                
+            </div>                                         
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+		let thumbnails = document.getElementsByClassName('thumbnail')
+
+		let activeImages = document.getElementsByClassName('active')
+
+		for (var i=0; i < thumbnails.length; i++){
+
+			thumbnails[i].addEventListener('mouseover', function(){
+				console.log(activeImages)
+				
+				if (activeImages.length > 0){
+					activeImages[0].classList.remove('active')
+				}
+				
+
+				this.classList.add('active')
+				document.getElementById('featured').src = this.src
+			})
+		}
+
+
+		let buttonRight = document.getElementById('slideRight');
+		let buttonLeft = document.getElementById('slideLeft');
+
+		buttonLeft.addEventListener('click', function(){
+			document.getElementById('slider').scrollLeft -= 180
+		})
+
+		buttonRight.addEventListener('click', function(){
+			document.getElementById('slider').scrollLeft += 180
+		})
+
+
+	</script>

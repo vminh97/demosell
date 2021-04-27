@@ -1,0 +1,37 @@
+<?php
+$linkindex = $this->baseURL($this->currentController);
+$linkcontact = $this->baseURL($this->currentController . '/contact');
+$linktutorial = $this->baseURL($this->currentController . '/tutorial');
+$linkprobycate = $this->baseURL($this->currentController.'/prbycate/id/');
+
+?>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href=" <?php echo $linkindex ?>  ">Trang Chủ</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sản Phẩm
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <?php foreach ($this->Items as $index){ ?>
+                        <a class="dropdown-item" style="color: #1b1e21" href="<?php echo $linkprobycate . $index['id']  ?>"><?php $index['id']   ?></a>
+                        <?php  } ?>
+                    </div>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo $linkcontact ?>">Liên hệ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo $linktutorial ?>">Hướng Dẫn Sử Dụng</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

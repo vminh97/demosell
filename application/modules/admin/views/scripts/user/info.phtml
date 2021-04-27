@@ -1,0 +1,51 @@
+<?php 
+	$user_name= $this->formText('user_name',$this->Items['user_name'],array('class'=>'txtmedium'));
+    $password = $this->formText('password',$this->Items['password'],array('class'=>'txtmedium'));
+    $email = $this->formText('email',$this->Items['email'],array('class'=>'txtmedium'));
+?>
+<form name="appForm" method="post" action="">
+
+                        <div class="clr"></div>
+
+                        <!-- BEGIN: CONTENT -->
+                        <div id="element-box">
+                            <div class="t">
+                                <div class="t">
+                                    <div class="t"></div>
+                                </div>
+                            </div>
+                            <div class="m">
+                                <!-- BEGIN: ELEMENT BOX -->
+						<div id="adminfieldset">
+                             <div class="adminheader">Item Detail</div>
+								
+                             <div id="row">
+                                    <div class="label">NameUser</div>
+                                    <?php echo $user_name;?>			
+                                </div>
+                                <div class="clr"></div>
+                                <div id="row">
+                                    <div class="label">Password</div>
+                                    <?php echo $password;?>			
+                                </div>
+                                <div id="row">
+                                    <div class="label">email</div>
+                                    <?php echo $email;?>			
+                                </div>
+                                <div class="clr"></div> 
+                                <div class="clr"></div>
+                                
+                                
+							</div>
+							
+                                <!-- END: ELEMENT BOX -->	
+                              <div class="clr"></div>
+                            </div>
+                            <div class="b">
+                                <div class="b">
+                                    <div class="b"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END: 	CONTENT -->
+                    </form>
